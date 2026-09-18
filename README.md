@@ -25,7 +25,7 @@
 </p>
 
 <p align="center">
-  <img src="public/idle_loop.mp4" width="90%" />
+  <img src="public/screenshots/s4.png" width="90%" />
 </p>
 
 ## ✨ Features
