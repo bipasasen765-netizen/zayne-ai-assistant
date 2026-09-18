@@ -68,13 +68,6 @@
 
 Follow the steps below to run Zayne on your own computer.
 
-## 1. Clone the repository
-
-```bash
-git clone https://github.com/bipasasen765-netizen/zayne-ai-assistant.git
-
-
-
 ## 🚧 Current Status & Future Plans
 
 Zayne is currently in an **early development stage**. The core features are working, but the project is still evolving.
@@ -95,3 +88,12 @@ I plan to continue improving Zayne and add more features in future updates, incl
 > **This project is not finished yet — it's a work in progress. More features will be added over time.**
 
 Stay tuned for future updates! 🚀
+
+
+## 1. Clone the repository
+
+```bash
+git clone https://github.com/bipasasen765-netizen/zayne-ai-assistant.git
+
+
+
