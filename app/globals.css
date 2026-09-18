@@ -1,5 +1,24 @@
 @import "tailwindcss";
 
+/* ১. ব্রাউজার ব্যাক সোয়াইপ ও সাইড স্ক্রোল বন্ধ (position: sticky সচল রেখে) */
+html, body {
+  overflow-x: clip;
+  overscroll-behavior-x: none;
+}
+
+/* ২. স্ক্রলবার সম্পূর্ণ হাইড রাখা */
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none !important;
+  width: 0px !important;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -10,6 +29,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  /* লাক্সারি অরিয়েন্টাল ফন্ট ক্লাস: font-cormorant */
+  --font-cormorant: var(--font-cormorant);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +44,60 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ================= ZAYNE CHATBOT ANIMATIONS ================= */
+/* গোল্ডেন পালস ও গ্লো */
+@keyframes subtleGoldPulse {
+  0%, 100% {
+    transform: scaleY(0.9) scaleX(1);
+    filter: drop-shadow(0 0 12px rgba(251, 191, 36, 0.95)) drop-shadow(0 0 4px #ffffff);
+  }
+  50% {
+    transform: scaleY(1.3) scaleX(1.05);
+    filter: drop-shadow(0 0 24px rgba(245, 158, 11, 1)) drop-shadow(0 0 8px #ffffff);
+  }
+}
+
+@keyframes metallicGoldRingGlow {
+  0%, 100% {
+    box-shadow: 0 0 35px rgba(251, 191, 36, 0.45), inset 0 0 20px rgba(251, 191, 36, 0.25), 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 55px rgba(245, 158, 11, 0.8), inset 0 0 30px rgba(251, 191, 36, 0.5), 0 0 18px rgba(255, 255, 255, 0.8);
+  }
+}
+
+/* সিলভার মেটালিক পালস ও গ্লো (অ্যাক্টিভ লিসেনিং স্টেট) */
+@keyframes subtleSilverPulse {
+  0%, 100% {
+    transform: scaleY(0.92) scaleX(1);
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.95)) drop-shadow(0 0 18px rgba(148, 163, 184, 0.7));
+  }
+  50% {
+    transform: scaleY(1.28) scaleX(1.06);
+    filter: drop-shadow(0 0 26px rgba(255, 255, 255, 1)) drop-shadow(0 0 32px rgba(203, 213, 225, 0.95));
+  }
+}
+
+@keyframes metallicSilverRingGlow {
+  0%, 100% {
+    box-shadow: 0 0 35px rgba(255, 255, 255, 0.65), inset 0 0 20px rgba(255, 255, 255, 0.35), 0 0 12px rgba(148, 163, 184, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 55px rgba(255, 255, 255, 0.95), inset 0 0 30px rgba(255, 255, 255, 0.55), 0 0 22px rgba(226, 232, 240, 0.95);
+  }
+}
+
+.gold-audio-wave {
+  animation: subtleGoldPulse 2.6s ease-in-out infinite;
+}
+.gold-metallic-glow {
+  animation: metallicGoldRingGlow 2.4s ease-in-out infinite;
+}
+.silver-audio-wave {
+  animation: subtleSilverPulse 1.9s ease-in-out infinite;
+}
+.silver-metallic-glow {
+  animation: metallicSilverRingGlow 1.9s ease-in-out infinite;
 }
